@@ -38,12 +38,10 @@ function visBilletter(){
     }
 }
 function SjekkNummer(){
-    let utNummer = "tallet kan ikke være mindre enn null.";
+    let utNummer = "tallet kan ikke være mindre enn en.";
     let string1 = document.getElementById("antall").value
     antallNr = Number(string1);
     if (antallNr < 1){
-        // utNummer += "tallet kan ikke være mindre enn null."
-        // utNummer += "</p>";
         document.getElementById("antallFeilmld").innerHTML = utNummer;
         console.log(utNummer)
         return false;
@@ -56,8 +54,6 @@ function SjekkNummer(){
 function SjekkFnavn() {
     let utFnavnFeil = "Du må skrive noe inn i Fornavn.";
     if (document.getElementById("Fnavn").value == "") {
-        // utFnavnFeil += "Du må skrive noe inn i Fornavn.";
-        // utFnavnFeil += "</p>";
         document.getElementById("FnavnFeilmld").innerHTML = utFnavnFeil;
         return false;
     }
@@ -69,8 +65,6 @@ function SjekkFnavn() {
 function SjekkEnavn() {
     let utEnavnFeil = "Du må skrive noe inn i Etternavn.";
     if (document.getElementById("Enavn").value == "") {
-        //  utEnavnFeil += "Du må skrive noe inn i Etternavn.";
-        //  utEnavnFeil += "</p>";
         document.getElementById("EnavnFeilmld").innerHTML = utEnavnFeil;
         return false;
     }
@@ -83,8 +77,6 @@ function SjekkTlfnr(){
     let utFeilTlfnr = "Dette er ikke et gyldig norsk telefonnr.";
     let tlfString = Number(document.getElementById("tlfNr").value);
     if (tlfString < 10000000 || tlfString > 99999999){
-        // utFeilTlfnr += "Dette er ikke et gyldig norsk telefonnr.";
-        // utFeilTlfnr += "</p>";
         document.getElementById("TlfnrFeilmld").innerHTML = utFeilTlfnr;
         return false;
     }
@@ -94,12 +86,10 @@ function SjekkTlfnr(){
     }
 }
 function SjekkEpost(){
-    let utEpostFeil = "Dette er ikke en godkjent Epost.";
+    const utEpostFeil = "Dette er ikke en godkjent Epost.";
     const sjekkEpost = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let sjekk = sjekkEpost.test(document.getElementById("mail").value)
     if (sjekk == false){
-        //  utEpostFeil += "Dette er ikke en godkjent Epost.";
-        //  utEpostFeil += "</p>";
         document.getElementById("EpostFeilmld").innerHTML = utEpostFeil;
         return false;
     }
@@ -124,10 +114,15 @@ function Enknapp(){
     SjekkEpost();
     if (SjekkNummer() == false || SjekkFnavn() == false || SjekkEnavn() == false || SjekkTlfnr() == false || SjekkEpost() == false){
         altIOrden = false;
+        console.log("noe gikk galt!")
     }
     else {
         register();
         visBilletter();
         resetteInput();
     }
+}
+function FjernSolgteBilletter(){
+    billetterSolgt.length = 0;
+    document.getElementById("visBilletter").innerHTML = "";
 }
