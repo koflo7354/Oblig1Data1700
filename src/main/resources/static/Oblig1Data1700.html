@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oblig1 Data1700</title>
+</head>
+<body>
+<h1>Bestilling av Kinobilletter</h1>
+
+<tr><td>Velg Film: </td></tr>
+<select id="typeFilm">
+  <option>Min bror bjørnen</option>
+  <option>Ringenes herre</option>
+  <option>Natt og Dag</option>
+</select>
+
+<br> <br> <br>
+
+<tr><td>Antall</td></tr>
+<input type="text" id="antall" onchange="">
+<div ><p id="antallFeilmld" style="color: red"></p></div>
+
+<br>
+
+<div>
+  <tr><td>Fornavn</td></tr>
+  <input type="text" id="Fnavn" onchange="">
+  <div><p id= "FnavnFeilmld" style="color: red"></p></div>
+
+  <br> <br>
+
+  <tr><td>Etternavn</td></tr>
+  <input type="text" id="Enavn" onchange="">
+  <div><p id="EnavnFeilmld" style="color: red"></p></div>
+  <br> <br>
+
+  <tr><td>Telefonnr</td></tr>
+  <input type="text" id="tlfNr" onchange="">
+  <div><p id="TlfnrFeilmld" style="color: red"></p></div>
+
+  <br> <br>
+
+  <tr><td>Epost</td></tr>
+  <input type="email" id="mail" onchange="">
+  <div><p id="EpostFeilmld" style="color: red"></p></div>
+  <br> <br>
+
+  <input type="button" value="Kjøp billett" onclick="Enknapp()">
+</div>
+<div>
+  <h2>Alle Billetter</h2>
+  <div id="visBilletter"></div>
+</div>
+
+
+<script src="Bilettsalg.js"></script>
+</body>
+</html>
