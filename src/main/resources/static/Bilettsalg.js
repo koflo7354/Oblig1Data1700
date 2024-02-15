@@ -31,7 +31,7 @@ function visBilletter(){
 
     for (let p of billetterSolgt){
         ut += "<tr>";
-        ut += "<td>"+p.film+"</td><td>"+p.antall+" stk"+"</td><td>"+p.Fnavn+"</td><td>"+ p.Enavn+"</td><td>"+p.tlfNr+"</td><td>"+p.email+"</td>";
+        ut += "<td>"+p.film+"</td><td>"+p.antall+"stk"+"</td><td>"+p.Fnavn+"</td><td>"+ p.Enavn+"</td><td>"+p.tlfNr+"</td><td>"+p.email+"</td>";
         ut += "</tr>";
 
         document.getElementById("visBilletter").innerHTML = ut;
