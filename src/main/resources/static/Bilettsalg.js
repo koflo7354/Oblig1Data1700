@@ -98,13 +98,13 @@ function SjekkEpost(){
         return true;
     }
 }
-function FjernFeilmld(){
-    document.getElementById("antallFeilmld").innerHTML = "";
-    document.getElementById("FnavnFeilmld").innerHTML = "";
-    document.getElementById("EnavnFeilmld").innerHTML = "";
-    document.getElementById("TlfnrFeilmld").innerHTML = "";
-    document.getElementById("EpostFeilmld").innerHTML = "";
-}
+//function FjernFeilmld(){
+//    document.getElementById("antallFeilmld").innerHTML = "";
+//    document.getElementById("FnavnFeilmld").innerHTML = "";
+//    document.getElementById("EnavnFeilmld").innerHTML = "";
+//    document.getElementById("TlfnrFeilmld").innerHTML = "";
+//    document.getElementById("EpostFeilmld").innerHTML = "";
+//}
 function Enknapp(){
     let altIOrden = true;
     SjekkNummer();
